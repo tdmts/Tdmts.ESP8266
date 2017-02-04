@@ -1,0 +1,52 @@
+﻿<Page
+    x:Class="Tdmts.ESP8266.GUI.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Tdmts.ESP8266.GUI"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <StackPanel Orientation="Vertical">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"></RowDefinition>
+                    <RowDefinition Height="1*"></RowDefinition>
+                    <RowDefinition Height="1*"></RowDefinition>
+                    <RowDefinition Height="1*"></RowDefinition>
+                    <RowDefinition Height="1*"></RowDefinition>
+                    <RowDefinition Height="1*"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <TextBlock x:Name="lblIP" Grid.Column="0" Grid.Row="0" VerticalAlignment="Center">IP address:</TextBlock>
+                <TextBox x:Name="txtIP" Grid.Column="1" Grid.Row="0" Text="192.168.0.25" VerticalAlignment="Center" Grid.ColumnSpan="3" InputScope="Digits" ></TextBox>
+                <TextBlock x:Name="lblPort" Grid.Column="0" Grid.Row="1" VerticalAlignment="Center">Port:</TextBlock>
+                <TextBox x:Name="txtPort" Grid.Column="1" Grid.Row="1" Text="5555" VerticalAlignment="Center" Grid.ColumnSpan="3" InputScope="Digits" ></TextBox>
+
+                <Button x:Name="btnConnect" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" VerticalAlignment="Center" Click="btnConnect_Click">Connect</Button>
+                <Button x:Name="btnDisconnect" Grid.Column="3" Grid.Row="2" Grid.ColumnSpan="2" VerticalAlignment="Center" Click="btnDisconnect_Click">Disconnect</Button>
+
+                <StackPanel Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="4">
+                    <TextBlock></TextBlock>
+                </StackPanel>
+
+                <Button x:Name="btnLedOn" Grid.Column="0" Grid.Row="4" VerticalAlignment="Center" Click="btnLedOn_Click">LED On</Button>
+                <Button x:Name="btnLedOff" Grid.Column="1" Grid.Row="4" VerticalAlignment="Center" Click="btnLedOff_Click">LED Off</Button>
+
+                <StackPanel Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="4" Grid.RowSpan="1">
+                    <ScrollViewer HorizontalScrollMode="Auto" VerticalScrollMode="Auto">
+                        <TextBox x:Name="txtMessage" Height="150" AcceptsReturn="True"></TextBox>
+                    </ScrollViewer>
+
+                </StackPanel>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</Page>

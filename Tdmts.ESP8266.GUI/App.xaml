@@ -1,0 +1,8 @@
+﻿<Application
+    x:Class="Tdmts.ESP8266.GUI.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Tdmts.ESP8266.GUI"
+    RequestedTheme="Light">
+
+</Application>
